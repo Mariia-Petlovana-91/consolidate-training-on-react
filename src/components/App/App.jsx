@@ -3,7 +3,7 @@ import '../App/App.scss';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import Section from '../Section/Section';
-import AddProfileForm from '../addProfileForm/addProfileForm';
+import AddProfileForm from '../AddProfileForm/addProfileForm';
 
 const PROFILES__DATA = [];
 
