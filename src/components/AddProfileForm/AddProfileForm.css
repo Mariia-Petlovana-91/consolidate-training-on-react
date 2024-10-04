@@ -1,0 +1,182 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  background-color: rgb(12, 28, 29);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.title__second {
+  margin-bottom: 16px;
+  color: rgba(243, 235, 235, 0.904);
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 768px) {
+  .title__second {
+    margin-bottom: 48px;
+    font-size: 48px;
+    line-height: 32px;
+  }
+}
+
+.form {
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  border: 1px solid rgb(119, 141, 20);
+  padding: 24px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.041);
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__span {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: rgba(243, 235, 235, 0.904);
+}
+.form__input, .form__textarea {
+  transition: box-shadow 0.3s linear;
+  background-color: rgba(255, 255, 255, 0.041);
+  outline: none;
+  border: 1px solid rgb(119, 141, 20);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: rgba(243, 235, 235, 0.904);
+}
+.form__input:hover, .form__input:focus, .form__textarea:hover, .form__textarea:focus {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.589);
+}
+.form__genderTitle {
+  margin-bottom: 20px;
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(243, 235, 235, 0.904);
+}
+.form__genderContainerLabel {
+  display: flex;
+}
+.form__genderLabel, .form__checkLabel {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+.form__genderLabel {
+  margin-right: 20px;
+}
+.form__genderLabel:last-child {
+  margin-right: 0px;
+}
+.form__genderInput, .form__checkInput {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.form__genderSpan, .form__checkSpan {
+  margin-left: 8px;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: rgba(243, 235, 235, 0.904);
+}
+.form__genderLabel:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(119, 141, 20);
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: background-color 0.3s;
+}
+.form__genderLabel:has(.form__genderInput:checked):before {
+  background-color: rgb(119, 141, 20);
+}
+.form__checkLabel:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(119, 141, 20);
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: background-color 0.3s;
+}
+.form__checkLabel:has(.form__checkInput:checked):before {
+  background-color: rgb(119, 141, 20);
+}
+.form__btn {
+  border: 1px solid rgb(119, 141, 20);
+  background-color: rgba(255, 255, 255, 0.041);
+  padding: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(243, 235, 235, 0.904);
+}
+.form__btn:hover, .form__btn:focus {
+  background-color: rgb(119, 141, 20);
+}/*# sourceMappingURL=addProfileForm.css.map */

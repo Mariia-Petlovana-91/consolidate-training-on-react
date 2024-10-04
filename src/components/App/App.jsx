@@ -1,9 +1,30 @@
 import '../sass/main.scss';
 import '../App/App.scss';
-function App() {
-	return (
-	 <h1 className='title'>Привіт</h1>
- )	
-}
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
+import Section from '../Section/Section';
+import AddProfileForm from '../addProfileForm/addProfileForm';
 
-export default App
+const PROFILES__DATA = [];
+
+export default function App() {
+	const [users, setUsers] = useState(PROFILES__DATA);
+
+	function addProfile(data) {
+		const finishAddProfile = {
+			...data,
+			id: nanoid(),
+		}
+		return finishAddProfile;
+	}
+
+	return (
+		<>
+			<Section title="Коментарі">
+				<div className='commentContainer'>
+					<AddProfileForm addIdProfile={addProfile} />
+				</div>
+			</Section>
+		</>
+	)
+}

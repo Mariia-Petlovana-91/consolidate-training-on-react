@@ -1,0 +1,10 @@
+.title__second{
+   margin-bottom: 16px;
+   color: $font-colorPrimary;
+   @include font (inherit, 24px, 600, 24px, 0.02em);
+   @media (min-width:768px) {
+	margin-bottom: 48px;
+	font-size:  48px;
+	line-height:32px ;
+   }
+}

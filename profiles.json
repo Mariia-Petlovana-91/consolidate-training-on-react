@@ -1,0 +1,50 @@
+[
+  {
+    "firstName": "Іван",
+    "lastName": "Іванов",
+    "age": 30,
+    "address": {
+      "street": "Вул. Центральна",
+      "city": "Київ",
+      "country": "Україна"
+    },
+    "type": "vip",
+    "consent": true,
+    "online": false
+  },
+  {
+    "firstName": "Марія",
+    "lastName": "Петренко",
+    "age": 25,
+    "address": {
+      "street": "Вул. Шевченка",
+      "city": "Львів",
+      "country": "Україна"
+    },
+    "type": "free",
+    "consent": false
+  },
+  {
+    "firstName": "Олег",
+    "lastName": "Сидоров",
+    "age": 40,
+    "address": {
+      "street": "Вул. Грушевського",
+      "city": "Одеса",
+      "country": "Україна"
+    },
+    "type": "middle",
+    "online": true
+  },
+  {
+    "firstName": "Анна",
+    "lastName": "Ковальчук",
+    "age": 35,
+    "address": {
+      "street": "Вул. Перемоги",
+      "city": "Харків",
+      "country": "Україна"
+    },
+    "type": "vip"
+  }
+]
