@@ -21,7 +21,9 @@ export default function AddCommentForm({addIdComment}) {
 			gender,
 			hasAddress,
 		}
-		return addIdComment(formData);
+		addIdComment(formData);
+		form.reset();
+		return;
 		
 	}
 

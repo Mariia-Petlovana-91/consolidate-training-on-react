@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "+1234567890",
+    "email": "john.doe@example.com",
+    "comment": "Looking forward to the event.",
+    "gender": "male",
+    "hasAddress": true,
+    "id": "vcwgqjyfuiljcsknmh"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "phone": "+0987654321",
+    "email": "jane.smith@example.com",
+    "comment": "Please send more details.",
+    "gender": "female",
+    "hasAddress": false,
+    "id": "vcwgqjyfuiljc2222sknmh"
+  },
+  {
+    "firstName": "Mike",
+    "lastName": "Johnson",
+    "phone": "+1122334455",
+    "email": "mike.johnson@example.com",
+    "comment": "Can I bring a guest?",
+    "gender": "male",
+    "hasAddress": true,
+    "id": "823ytiuw3f"
+  }
+]
