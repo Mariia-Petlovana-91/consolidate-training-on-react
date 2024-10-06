@@ -1,6 +1,6 @@
-import './AddProfileForm.scss'
+import './AddComentForm.scss'
 
-export default function AddProfileForm({addIdProfile}) {
+export default function AddCommentForm({addIdComment}) {
       function handleSabmit(e) {
 	 	e.preventDefault();
 		const form = e.currentTarget;
@@ -21,7 +21,7 @@ export default function AddProfileForm({addIdProfile}) {
 			gender,
 			hasAddress,
 		}
-		return addIdProfile(formData);
+		return addIdComment(formData);
 		
 	}
 

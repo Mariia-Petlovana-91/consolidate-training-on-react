@@ -3,7 +3,7 @@ import '../App/App.scss';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import Section from '../Section/Section';
-import AddProfileForm from '../AddProfileForm/AddProfileForm';
+import AddComent from '../AddCommentForm/AddCommentForm';
 
 
 const PROFILES__DATA = [];
@@ -11,7 +11,7 @@ const PROFILES__DATA = [];
 export default function App() {
 	const [users, setUsers] = useState(PROFILES__DATA);
 
-	function addProfile(data) {
+	function addIdComment(data) {
 		const finishAddProfile = {
 			...data,
 			id: nanoid(),
@@ -23,7 +23,7 @@ export default function App() {
 		<>
 			<Section title="Коментарі">
 				<div className='commentContainer'>
-					<AddProfileForm addIdProfile={addProfile} />
+					<AddComent addIdComment={addIdComment} />
 				</div>
 			</Section>
 		</>
