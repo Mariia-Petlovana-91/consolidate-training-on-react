@@ -1,9 +1,10 @@
 @import '../sass/main.scss';
 
-.commentContainer{
+.comment__container{
 	border-bottom: 1px solid $backgroundSecond;
 	padding-bottom: 20px;
 	@media (min-width:768px) {
 		padding-bottom: 40px;
 	}
+
 }

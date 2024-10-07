@@ -10,6 +10,7 @@
 	padding: 24px;
 	border-radius: 10px;
 	background-color: $backgroundSecond;
+	margin-bottom: 16px;
 
 	&__label {
 		display: flex;
@@ -20,22 +21,6 @@
 	&__span {
 		@include font(Georgia, 20px, 400, 20px, 0.02em);
 		color: $font-colorPrimary;
-	}
-
-	&__input,
-	&__textarea {
-		transition: box-shadow 0.3s linear;
-		background-color: $backgroundSecond;
-		outline: none;
-		border: 1px solid $accent;
-		border-radius: 5px;
-		padding: 10px;
-		@include font(Georgia, 16px, 300, 20px, 0.02em);
-		color: $font-colorPrimary;
-		&:hover,
-		&:focus {
-			box-shadow: 0 6px 12px rgba(255, 255, 255, 0.589);
-		}
 	}
 
 	&__genderTitle {

@@ -2,9 +2,9 @@ import './SearchComment.scss';
 
 export default function SearchComment({searchTerm, handleSearchChange}) {
 	return (<>
-		<input className='' type='text'
+		<input className='input search__input' type='text'
 			name='search'
-			placeholder='Знайти коментар за іменем'
+			placeholder='Пошук за іменем'
 			value={searchTerm}
                   onChange={handleSearchChange}
 		/>

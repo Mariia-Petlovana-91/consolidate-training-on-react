@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "formik": "^2.4.6",
     "modern-normalize": "^3.0.1",
     "nanoid": "^5.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.79.3"
+    "sass": "^1.79.3",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

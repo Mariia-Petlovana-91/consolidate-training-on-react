@@ -7,22 +7,21 @@ export default function CommentItem({ firstName, lastName, phone, email, comment
 
 	return (
 		<>
-			<h4 className=''>{firstName} {lastName}</h4>
-			<p className=''>{comment}</p>
-			<div className=''>
-				<button className='' type='button' onClick={() => onDeleteComment(id)}>Delete</button>
-				<button className='' type='button' onClick={toggleVisibility}>
-					{isVisible ? 'Hide Info' : 'Show Info'}
-				</button>
-				{isVisible && (
-					<AboutUser 
-						phone={phone}
-						email={email}
-						gender={gender}
-						hasAddress={hasAddress} 
+			<button className='btn comment__but' type='button' onClick={() => onDeleteComment(id)}>Delete</button>
+			<h4 className='title__fourth comment__title'>{firstName} {lastName}</h4>
+			<p className='comment__text'>{comment}</p>
+			<button className='btn comment__but comment__but-show' type='button' onClick={toggleVisibility}>
+				{isVisible ? 'Hide Info' : 'Show Info'}
+			</button>
+			{isVisible && (
+				<AboutUser 
+					phone={phone}
+					email={email}
+					gender={gender}
+					hasAddress={hasAddress} 
 					/>
-				)}
-			</div>
+			)}
+			
 		</>
 	);
 }

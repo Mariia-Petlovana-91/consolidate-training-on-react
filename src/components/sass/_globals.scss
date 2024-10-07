@@ -8,3 +8,40 @@
 	line-height:32px ;
    }
 }
+
+.btn{
+   padding: 10px 15px 10px 15px;
+   color: $font-colorPrimary;
+   @include font (inherit, 16px, 400, 20px, 0.02em);
+   background-color: $backgroundSecond;
+   border: 1px solid $accent;
+   border-radius: 5px;
+   margin-bottom: 16px;
+
+   &:hover, &:focus{
+      background-color: $accent;
+   }
+}
+
+.input,
+.textarea {
+   transition: box-shadow 0.3s linear;
+   background-color: $backgroundSecond;
+   outline: none;
+   border: 1px solid $accent;
+   border-radius: 5px;
+   padding: 10px;
+    @include font(Georgia, 16px, 300, 20px, 0.02em);
+   color: $font-colorPrimary;
+   overflow: hidden;
+   
+   &:hover,
+   &:focus {
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.589);
+   }
+}
+
+.title__fourth{
+   @include font(Georgia, 20px, 600, 20px, 0.02em);
+   color: $accent;
+}
