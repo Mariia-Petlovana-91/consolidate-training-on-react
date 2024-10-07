@@ -2,12 +2,9 @@ import './CommentsList.scss'
 import CommentItem from "../CommentItem/CommentItem";
 import SearchComment from '../SearchComment/SearchComment';
 
-export default function CommentsList({ array, onDeleteComment, searchTerm, handleSearchChange}) {
+export default function CommentsList({ array, onDeleteComment, isVisible, toggleVisibility}) {
 	return (
 		<ul className=''>
-			<SearchComment searchTerm={searchTerm}
-				handleSearchChange={handleSearchChange}
-			/>
 			{
 				array.map(ar => (
 					<li className='' key={ar.id}>
@@ -21,6 +18,8 @@ export default function CommentsList({ array, onDeleteComment, searchTerm, handl
 							phone={ar.phone}
 							email={ar.email}
 							onDeleteComment={onDeleteComment}
+							isVisible={isVisible}
+							toggleVisibility={toggleVisibility}
 						/>
 					</li>
 				))

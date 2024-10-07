@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import './CommentItem.scss';
 import AboutUser from '../AboutUser/AboutUser';
 
-export default function CommentItem({ firstName, lastName, phone, email, comment, gender, hasAddress, id, onDeleteComment }) {
-	const [isVisible, setIsVisible] = useState(false);
+export default function CommentItem({ firstName, lastName, phone, email, comment, gender, hasAddress, id, onDeleteComment, isVisible, toggleVisibility }) {
 
-	const toggleVisibility = () => {
-		setIsVisible(!isVisible);
-	}
 
 	return (
 		<>

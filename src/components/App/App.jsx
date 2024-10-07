@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import PROFILES__DATA from '/comments.json'
 import Section from '../Section/Section';
-import AddComent from '../AddCommentForm/AddCommentForm';
+import ShowForm from '../ShowForm/ShowForm';
+import SearchComment from '../SearchComment/SearchComment';
+
 import CommentsList from '../CommentsList/CommentsList';
 
 
@@ -16,6 +18,12 @@ export default function App() {
 
     const [users, setUsers] = useState(getInitialState);
     const [searchTerm, setSearchTerm] = useState('');
+
+    const [isVisible, setIsVisible] = useState(false);
+
+	function toggleVisibility ()  {
+		setIsVisible(!isVisible);
+	}
 
     useEffect(() => {
         localStorage.setItem('comments', JSON.stringify(users));
@@ -40,18 +48,28 @@ export default function App() {
     }
 
     const filteredUsers = users.filter(user =>
-        user.firstName.toLowerCase().includes(searchTerm.toLowerCase()) // Пошук по firstName
+        user.firstName.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
 	return (
 		<>
 			<Section title="Коментарі">
-				<div className='commentContainer'>
-					<AddComent addIdComment={addIdComment} />
+                <div className='commentContainer'>
+                    <div className=''>
+                        <ShowForm toggleVisibility={toggleVisibility}
+                            isVisible={isVisible}
+                            addIdComment={addIdComment}
+                        />
+                        <SearchComment searchTerm={searchTerm}
+				            handleSearchChange={handleSearchChange}
+			            />
+                    </div>
 					<CommentsList array={filteredUsers}
 						onDeleteComment={onDeleteComment}
 						searchTerm={searchTerm}
-						handleSearchChange={handleSearchChange}
+                        handleSearchChange={handleSearchChange}
+                        isVisible={isVisible}
+                        toggleVisibility={toggleVisibility}
 					/>
 				</div>
 				
