@@ -1,1 +1,20 @@
 @import '../sass/main.scss';
+
+.about{
+	
+	padding: 5px;
+
+	&__text{
+		color: $font-colorPrimary;
+		margin-bottom: 8px;
+
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+
+	&__strong{
+		margin-right: 5px;
+		color: $accent;
+	}
+}

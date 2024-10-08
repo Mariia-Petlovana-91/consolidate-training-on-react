@@ -3,8 +3,23 @@
 .comment__container{
 	border-bottom: 1px solid $backgroundSecond;
 	padding-bottom: 20px;
-	@media (min-width:768px) {
+	@media (min-width:680px) {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
 		padding-bottom: 40px;
 	}
 
+}
+
+.comment__elFormAdd{
+	width: 100%;
+	@media (min-width:680px) {
+		min-width:350px ;
+	}
+
+	@media (min-width:786px) {
+	min-width:400px;
+	max-width: 500px;
+	}
 }

@@ -4,25 +4,27 @@
 	margin-bottom: 10px;
 }
 
-.comment__text{
-	@include font(Georgia, 16px, 300, 20px, 0.02em);
-	color: $font-colorPrimary;
+.comment__text {
+	@include font( Georgia, 16px, 500, 24px, 0.02em);
+	color: rgba(243, 235, 235, 0.904);
 	margin-bottom: 10px;
+	max-height: 120px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
-.comment__butContainer{
-	@include flex (flex, space-between, center);
+.comment__text::-webkit-scrollbar {
+	display: none;
+	/* Приховуємо скролбар для Chrome, Safari та Opera */
 }
 
-.comment__but{
-	margin-right: 10px;
-
-	&:last-child{
-		margin-right: 0px;
-	}
-
-		&__but-show {
-			width: 100%;
-		}
+.comment__btnDelete{
+	width: 30px;
+	margin-left: auto;
 }
+
+
+
+
 

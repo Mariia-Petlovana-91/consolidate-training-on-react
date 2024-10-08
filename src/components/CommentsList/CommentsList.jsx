@@ -1,7 +1,7 @@
-import './CommentsList.scss'
+import './CommentsList.scss';
 import CommentItem from "../CommentItem/CommentItem";
 
-export default function CommentsList({ array, onDeleteComment, isVisible, toggleVisibility}) {
+export default function CommentsList({ array, onDeleteComment }) {
 	return (
 		<ul className='comment__list'>
 			{
@@ -17,8 +17,6 @@ export default function CommentsList({ array, onDeleteComment, isVisible, toggle
 							phone={ar.phone}
 							email={ar.email}
 							onDeleteComment={onDeleteComment}
-                                          isVisible={isVisible === ar.id}
-                                          toggleVisibility={() => toggleVisibility(ar.id)}
 						/>
 					</li>
 				))

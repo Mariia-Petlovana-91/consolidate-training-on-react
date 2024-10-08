@@ -2,9 +2,11 @@ import '../sass/main.scss';
 import '../App/App.scss';
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
+import { toggleVisibility } from '../../utils/changeVisibiliti'; 
 import PROFILES__DATA from '/comments.json'
 import Section from '../Section/Section';
 import ShowForm from '../ShowForm/ShowForm';
+import Logo from '../Logo/Logo';
 import SearchComment from '../SearchComment/SearchComment';
 import CommentsList from '../CommentsList/CommentsList';
 
@@ -20,10 +22,7 @@ export default function App() {
 
     const [visibleId, setVisibleFormId] = useState(null);
 
-  
-  function toggleVisibility (elId)  {
-    setVisibleFormId(prevId => (prevId === elId ? null : elId));
-  };
+     
 
     useEffect(() => {
         localStorage.setItem('comments', JSON.stringify(users));
@@ -57,24 +56,24 @@ export default function App() {
 		<>
 			<Section title="Коментарі">
                 <div className='comment__container'>
-                        <ShowForm toggleVisibility={()=>toggleVisibility(1)}
+                    <div className='comment__elFormAdd'>
+                        <ShowForm toggleVisibility={()=>toggleVisibility(setVisibleFormId, 1)}
                             isVisible={visibleId === 1}
                             addIdComment={addIdComment}
                         />
-                    <div className='comment__head'>
+                        <Logo/>
+                    </div>
+                    <div>
                         <SearchComment searchTerm={searchTerm}
-				            handleSearchChange={handleSearchChange}
+                            handleSearchChange={handleSearchChange}
                         />
                         <CommentsList array={filteredUsers}
 						onDeleteComment={onDeleteComment}
 						searchTerm={searchTerm}
                         handleSearchChange={handleSearchChange}
-						isVisible={visibleId}
-						toggleVisibility={toggleVisibility}
 					/>
                     </div>
 				</div>
-				
 			</Section>
 		</>
 	)

@@ -16,8 +16,8 @@
    background-color: $backgroundSecond;
    border: 1px solid $accent;
    border-radius: 5px;
-   margin-bottom: 16px;
-
+   width: 100%;
+   transition: background-color 0.3s linear;
    &:hover, &:focus{
       background-color: $accent;
    }
@@ -44,4 +44,37 @@
 .title__fourth{
    @include font(Georgia, 20px, 600, 20px, 0.02em);
    color: $accent;
+}
+
+.icon {
+   color: $accent ;
+}
+
+.error{
+   color: rgb(231, 67, 67);
+   @include font(Georgia, 14px, 200, 14px, 0.02em);
+}
+
+.position__container {
+   position: relative;
+}
+
+.position__input {
+   width: 100%;
+   padding-right: 32px;
+   min-width: 280px;
+}
+
+.position__icon {
+   position: absolute;
+   right: 8px;
+   top: 50%;
+   transform: translateY(-50%);
+   pointer-events: none;
+   transition: top 0.3s linear;
+}
+
+.position__input:hover ~ .position__icon,
+.position__input:focus ~ .position__icon{
+   top: -50%;
 }
